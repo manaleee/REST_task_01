@@ -11,6 +11,7 @@ class Flight(models.Model):
 	def __str__(self):
 		return "to %s at %s" % (self.destination, str(self.time))
 
+#----------------------------------------------------------------------- 
 
 class Booking(models.Model):
 	flight = models.ForeignKey(Flight, on_delete=models.CASCADE, related_name="bookings")
